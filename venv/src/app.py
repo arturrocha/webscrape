@@ -18,14 +18,14 @@ pbar = Bar('Processing', max=20)
 
 spinner = Spinner('searching ')
 
-t1 = site_search(offset,min,max)
-while t1 != False:
-    prop_url_list.extend(t1)
+res_search = site_search(offset,min,max)
+while res_search != False:
+    prop_url_list.extend(res_search)
     offset += 20
-    t1 = site_search(offset,min,max)
+    res_search = site_search(offset,min,max)
     spinner.next()
 
-print("\rgrabing pics...\r")
+print("\rCreating dirs in \'daft.ie_scraper/venv/downloads/.....\' and adding pictures...\r")
 
 grab_pics(prop_url_list)
 
