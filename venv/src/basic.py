@@ -61,6 +61,7 @@ def site_search(offset,min,max):
 
         return prop_url_list
 
+
 def grab_pics(prop_url_list):
     iterator = len(prop_url_list)
     pbar = Bar('Processing', max=iterator)
